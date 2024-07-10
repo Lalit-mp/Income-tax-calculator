@@ -1,4 +1,4 @@
-// const inputs= document.querySelectorAll("input");
+
 const input = document.querySelector("input");
 const range = document.querySelector(".range");
 const theMassage = document.querySelector(".massage");
