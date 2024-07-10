@@ -2,12 +2,10 @@
 const input = document.querySelector("input");
 const range = document.querySelector(".range");
 const theMassage = document.querySelector(".massage");
+// console.log(theMassage);
 const theOutputText = document.querySelector(".output-text");
 function taxCalculator(ammount) {
-  if (ammount.value === undefined || ammount.value === null) {
-    theMassage.textContent = "Please enter your income to Calculate tax";
-    range.value = 0;
-  } else if (ammount <= 300000) {
+  if (ammount <= 300000) {
     theMassage.textContent = "Congratulations- You Don't need to pay any text";
     theOutputText.textContent = "";
   } else if (ammount <= 600000) {
@@ -34,7 +32,7 @@ function taxCalculator(ammount) {
     const taxslab5 = (30 / 100) * range.value + 150000;
     theOutputText.textContent = `Your income is ${range.value} So you have to pay ${Math.round(taxslab5)} As income tax`;
   } else {
-    theMassage.textContent = "Please add a valid value";
+    console.log("wrong entry");
   }
 }
 
@@ -43,9 +41,6 @@ range.addEventListener("input", () => {
   taxCalculator(input.value);
 });
 input.addEventListener("input", () => {
-  if (input.value == undefined) {
-    theMassage.textContent = "Please enter your income to Calculate tax";
-  }
   range.value = input.value;
   taxCalculator(range.value);
 });
