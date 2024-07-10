@@ -15,8 +15,9 @@ body{
     background-color: rgb(196, 237, 255);
 }
 a{
-    text-decoration:none;
+    text-decoration: underline;
     color:black;
+    cursor:pointer;
 }
 h1{
     text-align: center;
