@@ -10,9 +10,9 @@
 <body>
     <h1>Income Tax Calculator</h1>
     <form action="#">
-        <input type="number" name="income" id="income" placeholder="Add your yearly income" value= 0>
+        <input type="number" name="income" id="income" placeholder="Add your yearly income" min="0" max="10000000" value= "0">
         <!-- <label for="income-range"> Your income</label> -->
-        <input type="range" name="income-range" id="income-range" min="0" max="10000000" value= 0 class="range">
+        <input type="range" name="income-range" id="income-range" min="0" max="10000000" value= 0 class="range" step="10000">
         <p class="massage">Please enter your income to Calculate tax</p>
         <p class="output-text"></p>
         <!-- Your payable tax for this year is this -->
