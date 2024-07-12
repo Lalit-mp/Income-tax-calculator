@@ -5,20 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Income Tax Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="Script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Income Tax Calculator</h1>
     <form action="#">
         <input type="number" name="income" id="income" placeholder="Add your yearly income" min="0" max="10000000" value= "0">
-        <!-- <label for="income-range"> Your income</label> -->
+
         <input type="range" name="income-range" id="income-range" min="0" max="10000000" value= 0 class="range" step="10000">
-        <p class="massage">Please enter your income to Calculate tax</p>
-        <p class="output-text"></p>
-        <!-- Your payable tax for this year is this -->
+  
     </form>
-    <br>
-    <br>
-    <p>Reference taken from new Tax regime u/s 115BAC <a href="./refrence-image.png" target="_blank"> Click Here</a></p>
+    <div class="table">
+<table>
+    <tr>
+        <th>S. NO.</th>
+        <th>Income Tax Slab</th>
+        <th>Income Tax Rate</th>
+    </tr>
+    <tr class="opacity">
+        <td>1</td>
+        <td>Up to 3,00,000</td>
+        <td>Nil</td>
+    </tr>
+    <tr class="opacity">
+        <td>2</td>
+        <td>3,00,001 - to 6,00,000</td>
+        <td>5% Above 3,00,000</td>
+    </tr>
+    <tr class="opacity">
+        <td>3</td>
+        <td>6,00,001 - to 9,00,000</td>
+        <td>15,000 + 10% Above 6,00,000</td>
+    </tr>
+    <tr class="opacity">
+        <td>4</td>
+        <td>9,00,001 - to 12,00,000</td>
+        <td>45,000 + 15% Above 9,00,000</td>
+    </tr>
+    <tr class="opacity">
+        <td>5</td>
+        <td>12,00,001 - to 15,00,000</td>
+        <td>90,000 + 20% Above 12,00,000</td>
+    </tr>
+    <tr class="opacity">
+        <td>6</td>
+        <td>Above 15,00,000</td>
+        <td>1,50,000 + 30% Above 15,00,000</td>
+    </tr>
+</table>
+</div>
+
 </body>
 </html>
