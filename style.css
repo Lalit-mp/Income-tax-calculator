@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     font-family:Arial, Helvetica, sans-serif;
     display: flex;
@@ -12,38 +12,29 @@ body{
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background-color: rgb(196, 237, 255);
-}
-a{
-    text-decoration: none;
-    color:rgb(64, 64, 64);
-    cursor:pointer;
+    background-color: #42bfddff;
+    background-color: #ff66b3ff;
 }
 h1{
     text-align: center;
-    /* margin-bottom: 40px; */
     
 }
 input[type="number"]{
-    width: 60vw;
+    width: 50vw;
     height: 5vh;
     border-radius: 8px;
     outline: none;
-    padding: 10px;
-    font-size:1.4rem;
+    padding: 15px 10px;
+    font-size: 1.2rem ;
+    background-color: #bbe6e4ff;
 }
 input[type="range"]{
-    width: 50vw;
+    width: 48vw;
     height: 5vh;
     border-radius: 8px;
     color: brown;
 }
-p{
-    margin: 0 20px;
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    text-align: center;
-}
+
 form{
     /* height: 100%; */
     display: flex;
@@ -52,4 +43,61 @@ form{
     justify-content: center;
     align-content: center;
     gap: 10px;
+}
+.table {  
+    width: 48vw;
+}
+table {
+    width: 100%;
+    text-align: left;   
+    border-collapse:collapse;
+    border: 0.5px solid grey;
+}
+table tr {
+    width: 33%;
+}
+table tr th {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 20px 20px 20px 10px;
+    border-bottom: 0.5px solid grey;
+    background-color: rgb(232, 236, 236);
+    background-color: #bbe6e4ff;
+}
+table tr td {
+    font-weight: 100;
+    padding: 15px 20px 15px 10px;
+    border-bottom: 0.5px solid grey;
+    background-color: rgb(240, 246, 246);
+
+}
+
+/* Responsive  */
+@media only screen and (max-width: 480px) {
+    body{
+        gap: 20px;
+        height: 100vh;
+        justify-content: space-around;
+    }
+    input[type="number"]{
+        width: 80vw;
+        height: 5vh;
+    }
+    input[type="range"]{
+        width: 80vw;
+    }
+    .table {  
+        width: 80vw;
+    }
+    h1{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    table tr th {
+        padding: 7px 10px 7px 10px;
+    }
+    table tr td {
+        padding: 5px 10px 5px 10px;
+    
+    }
 }
