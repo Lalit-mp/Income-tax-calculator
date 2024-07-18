@@ -12,15 +12,16 @@ body{
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background-color: #42bfddff;
-    background-color: #ff66b3ff;
+    /* background-color: #42bfddff; */
+    background-color: rgb(240, 240, 240);
 }
 h1{
-    text-align: center;
+    text-align: center; 
+    color: rgb(14, 165, 112);
     
 }
 input[type="number"]{
-    width: 50vw;
+    width: 49vw;
     height: 5vh;
     border-radius: 8px;
     outline: none;
@@ -28,15 +29,40 @@ input[type="number"]{
     font-size: 1.2rem ;
     background-color: #bbe6e4ff;
 }
-input[type="range"]{
+
+
+input[type="range"] {
+    -webkit-appearance: none;
     width: 48vw;
-    height: 5vh;
+    margin-top: 10px ;
     border-radius: 8px;
-    color: brown;
 }
 
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #bbe6e4ff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(14, 165, 112);
+    -webkit-appearance: none;
+    transform: translatey(-10px);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(14, 165, 112);
+    border-radius: 5px;
+}
+
+
 form{
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,8 +102,9 @@ table tr td {
 @media only screen and (max-width: 480px) {
     body{
         gap: 20px;
-        height: 100vh;
-        justify-content: space-around;
+        height: 90vh;
+        justify-content: center  ;
+        margin: 20px;
     }
     input[type="number"]{
         width: 80vw;
