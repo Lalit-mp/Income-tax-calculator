@@ -37,12 +37,12 @@ range.addEventListener("input", () => {
   input.value = range.value;
   taxCalculator(input.value);
 });
-
 input.addEventListener("input", () => {
-  if (input.value === "" || input.value === undefined || input.value === null) {
-      range.value = 0; 
+  input.value = input.value.replace(/[^0-9]/g, '');
+  if (input.value === '') {
+    range.value = 0;
   } else {
-      range.value = input.value;
-      taxCalculator(input.value);
+    range.value = parseFloat(input.value);
+    taxCalculator(parseFloat(input.value));
   }
 });
