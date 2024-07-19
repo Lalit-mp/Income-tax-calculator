@@ -104,7 +104,7 @@ table tr td {
         gap: 20px;
         height: 90vh;
         justify-content: center  ;
-        margin: 20px;
+/*         margin: 20px; */
     }
     input[type="text"]{
         width: 80vw;
